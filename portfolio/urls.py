@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.urls import include, path
+from . import views
 
 urlpatterns = [
-    path('portfolio/', include('portfolio.urls')),
+    path('', views.home, name='home'),
+    path('contact/', views.contact, name='contact'),
     path('greet/<str:name>/', views.greet_by_name),  
     path('admin/', admin.site.urls),
 ]
