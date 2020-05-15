@@ -1,4 +1,4 @@
-"""portfolio_site URL Configuration
+"""messageboard URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -14,15 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from portfolio import views
 from django.urls import path
-from django.urls import include, path
-import messageboard.urls
+import portfolio.views
 import portfolio.urls
-
+import portfolio_site.urls
 urlpatterns = [
-    path('messages/'include('messageboard.urls')),
-    path('', include('portfolio.urls')),
-  
+
     path('admin/', admin.site.urls),
 ]
